@@ -1,11 +1,46 @@
-.input{
-  width: 120px;
-  border: 1px solid #d9d9d9;
-  &:hover{
-    background-color: #f6f6f6;
+@primary-color: #1a80d4;
+.main{
+  position: relative;
+  .wrapper{
+    position: relative;
+    .input{
+      height: 20px;
+      width: 120px;
+      border: 0 solid #d9d9d9;
+      background-color: #f6f6f6;
+      &:focus{
+        outline: none;
+      }
+      &:hover{
+        background-color: #e4e3e3;
+      }
+    }
+    .icon{
+      position: absolute;
+      top: 3px;
+      right: 6px;
+      width: 14px;
+    }
+
   }
-  &:focus{
-    border: 1px solid #1a80d4;
-    outline: none;
+  .active{
+    border: 1px solid @primary-color !important;
+    background-color: #ffffff !important;
+  }
+  .menu{
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    position: absolute;
+    max-height: 120px;
+    margin-top: 3px;
+    width: 125px;
+    border: 1px solid #d9d9d9;
+    overflow:auto;
+    // 悬浮效果
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+  }
+  .appear{
+    opacity: 0.9;
   }
 }
+

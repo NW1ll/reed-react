@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
-import styles from '../select/styles/options.moudule.less';
-import './styles/options.moudule.less';
-console.log(styles);
+import styles from './styles/options.module.less';
+import './styles/options.module.less';
 
-export default function Option(props: { key: string; children: React.ReactNode; disabled?: boolean; value?: number }) {
-  const { key, children, disabled, value } = props;
+export default function Option(props: { children: React.ReactNode; disabled?: boolean; value?: number }) {
+  const { children, disabled, value } = props;
+  console.log(styles);
   return (
     <>
-      <div key={key} className={'option'}>
-        {children}
-      </div>
+      <div className={styles['option']}>{children}</div>
     </>
   );
 }

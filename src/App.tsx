@@ -10,9 +10,9 @@ function App() {
     <>
       <div className={styles['main-page']}>
         <Select placeholder={'请输入'} disabled={true}>
-          <Option value={123}>123</Option>
-          <Option value={123}>123</Option>
-          <Option value={123}>123</Option>
+          <Option>123</Option>
+          <Option>456</Option>
+          <Option>789</Option>
         </Select>
       </div>
     </>

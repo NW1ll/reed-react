@@ -8,7 +8,7 @@ import React from 'react';
 function Select(props: { placeholder: string; disabled?: boolean; children?: React.ReactNode }) {
   const { placeholder, disabled, children } = props;
   const [isClick, setIsClick] = useState(false);
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState<number | string>('');
   const inputClass = isClick ? styles['input'] + ' ' + styles['active'] : styles['input'];
   const menuClass = isClick ? styles['menu'] + ' ' + styles['appear'] : styles['menu'];
 
